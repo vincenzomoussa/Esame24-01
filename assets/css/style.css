@@ -27,7 +27,6 @@ footer {
 }
 
 #creation-form {
-  color: white;
   font-size: 20px;
   font-weight: 700;
 }
@@ -42,4 +41,12 @@ footer {
 
 #titolo3 {
   font-weight: 200;
+}
+
+#dettagli p {
+  font-size: 20px;
+}
+
+#dettagli h5 {
+  font-size: 30px;
 }
