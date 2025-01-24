@@ -54,3 +54,59 @@ if (cart) {
 }
 
 newShoppingCart();
+
+// Vado a crearmi la logica che mi permetterà di far visualizzare uno "spinner" al caricamento dei dati dallo storage, quindi dal server.
+
+fetch(url, {
+  headers: {
+    Authorization: apiKey,
+  },
+})
+  .then((response) => {
+    console.log("RESPONSE", response);
+    if (response.ok) {
+      const spinner = document.getElementById("spinner");
+      spinner.classList.add("d-none");
+      return response.json();
+    } else {
+      throw new Error("No ok");
+    }
+  })
+  .then((arrayOfPokèmons) => {
+    console.log(arrayOfPokèmons);
+    const row = document.getElementById("shop");
+    arrayOfPokèmons.forEach((pokè) => {
+      // Questo mi genera tante colonne card per quanti elementi sono presenti nel server. Ovviamente unisco l'utile al dilettevole, quindi creandomi a priori delle classi per le card, rendendole responsive.
+      const newCol = document.createElement("div");
+      newCol.classList.add("col", "col-12", "col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
+      newCol.innerHTML = `
+            <div class="card mt-3 w-100">
+                <img onclick="window.location.href = 'details.html?id=${"" + pokè._id}'" src=" ${
+        pokè.imageUrl
+      }" class="card-img-top h-50 object-fit-fill transition" alt="${pokè.brand} ${pokè.name}">
+                <div class="card-body">
+                    <h5 class="card-title"><a class="text-decoration-none text-black" href="details.html?id=${
+                      "" + pokè._id
+                    }">${pokè.brand} ${pokè.name}</a></h5>
+                    <p class="card-text">Potenza : ${pokè.description} hp</p>
+                    <p class="card-text">${pokè.price}€
+                </div>    
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="details.html?id=${"" + pokè._id}" class="btn btn-outline-success">Dettagli</a>
+                    <a href="backoffice.html?id=${"" + pokè._id}" class="btn btn-outline-warning">Modifica</a>
+                </div>    
+            </div>
+        `;
+      row.appendChild(newCol);
+    });
+  })
+  .catch((error) => {
+    console.log("ERROR", error);
+    if (response.status === 500) {
+      alert("Problema del server");
+    }
+    if (response.status === 429) {
+      alert("Server overloadaed");
+    }
+    alert("Assenza di connessione...");
+  });
