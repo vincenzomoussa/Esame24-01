@@ -85,10 +85,10 @@ fetch(url, {
       const newCol = document.createElement("div");
       newCol.classList.add("col", "col-12", "col-md-6", "col-lg-4", "d-flex", "align-items-stretch");
       newCol.innerHTML = `
-            <div class="card mt-3 w-100">
+            <div class="card mt-3 w-100" id="genitoreFoto">
                 <img onclick="window.location.href = 'details.html?id=${"" + pokè._id}'" src=" ${
         pokè.imageUrl
-      }" class="card-img-top h-50 object-fit-fill transition" alt="${pokè.name}">
+      }" class="card-img-top h-50 object-fit-fill transition hover-zoom" id="fotoPokè" alt="${pokè.name}">
                 <div class="card-body text-center">
                     <h5 class="card-title mb-5"><a class="text-decoration-none text-black" href="details.html?id=${
                       "" + pokè._id
@@ -97,7 +97,7 @@ fetch(url, {
                     <p class="card-text mb-2">Livello: ${pokè.description}
                     <p class="card-text mb-2">Prezzo: €${pokè.price}
                 </div>    
-                <div class="card-footer d-flex justify-content-between">
+                <div class="card-footer d-flex justify-content-between bg-white">
                     <a href="details.html?id=${"" + pokè._id}" class="btn btn-outline-success">Dettagli</a>
                     <a href="backoffice.html?id=${"" + pokè._id}" class="btn btn-outline-warning">Modifica</a>
                 </div>    
