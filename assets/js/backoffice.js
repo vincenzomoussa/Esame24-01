@@ -16,6 +16,11 @@ class Pokèmon {
   }
 }
 
+// Registro l'anno attuale da mettere con la logica ai footer di tutte le pagine.
+
+const yearSpan = document.getElementById("current-year");
+yearSpan.innerText = new Date().getFullYear();
+
 // Inizializzo le costanti e le definisco, saranno le stesse che "daranno vita" ai Pokèmon.
 
 const brandInput = document.getElementById("brand");
@@ -50,13 +55,14 @@ if (id) {
       const deleteButton = document.createElement("button");
       deleteButton.setAttribute("type", "button");
       deleteButton.classList.add("btn", "btn-danger", "mt-3");
-      deleteButton.innerText = "LIBERA POKEMON";
+      deleteButton.innerText = "LIBERA POKEMON"; // Mi creo un bottone che mi compare solo nel caso in cui il Pokèmon esista già nel server e mi da l'opportunità, tramite modale, di liberarlo (eliminarlo).
       deleteButton.setAttribute("data-bs-toggle", "modal");
       deleteButton.setAttribute("data-bs-target", "#delete-modal");
       const yesDelete = document.getElementById("yes-delete");
       yesDelete.addEventListener("click", () => {
         deletePokèmon(pokèmon._id);
         window.location.replace("backoffice.html");
+
         // Faccio il reset della pagina, in modo che non crei conflitti con la successiva creazione di nuovi Pokèmon e i loro ID
       });
       buttons.appendChild(deleteButton);
@@ -83,7 +89,7 @@ const deletePokèmon = function (id) {
   })
     .then((response) => {
       if (response.ok) {
-        console.log("Liberato");
+        console.log("Il pokèmon è stato liberato");
       } else {
         if (response.status === 500) {
           alert("Problema del server");
