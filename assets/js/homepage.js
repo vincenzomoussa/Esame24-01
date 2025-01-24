@@ -116,3 +116,14 @@ fetch(url, {
     }
     alert("Assenza di connessione...");
   });
+
+// Provo a implementare la stessa funzione della scroll di Medium, quindi si attacca alla parte superiore dello scroll e il background cambia leggermente, così' da permettere una fluidità maggiore della pagina.
+
+/* window.addEventListener("scroll", function () {
+  var navbar = document.getElementById("barra");
+  if (window.scrollY > 410) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+}); */
