@@ -5,6 +5,11 @@ const url = "https://striveschool-api.herokuapp.com/api/product/";
 const key = "pokèmons";
 let cart = JSON.parse(localStorage.getItem(key));
 
+// Registro l'anno attuale da mettere con la logica ai footer di tutte le pagine.
+
+const yearSpan = document.getElementById("current-year");
+yearSpan.innerText = new Date().getFullYear();
+
 // Inizialmente mi vado a prendere il nodo del carrello dall'html, lo collego al local storage e gli permetto di calcolare gli elementi al suo interno, man mano che vengono inseriti.
 const newShoppingCart = function () {
   const shoppingCartDiv = document.getElementById("shopping-cart");
