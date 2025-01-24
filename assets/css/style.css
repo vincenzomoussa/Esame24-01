@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+body {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b0470f4a-edba-48c5-a33e-f4a6d9360d8a/d5l5h04-2d9c803c-3e47-468a-8d01-c183bb450c4d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IwNDcwZjRhLWVkYmEtNDhjNS1hMzNlLWY0YTZkOTM2MGQ4YVwvZDVsNWgwNC0yZDljODAzYy0zZTQ3LTQ2OGEtOGQwMS1jMTgzYmI0NTBjNGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pdvt-1gIZMu_I29Q_eVmjvr9qaFdf_s7CA51WgVPrCw);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav,
+footer {
+  background-image: url(https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMjJiYXRjaDUta3VsLTM2XzEuanBn.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+#creation-form {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#titolo1 {
+  font-weight: 400;
+}
+
+#titolo2 {
+  font-weight: 500;
+}
+
+#titolo3 {
+  font-weight: 200;
+}
