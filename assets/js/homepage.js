@@ -89,13 +89,13 @@ fetch(url, {
                 <img onclick="window.location.href = 'details.html?id=${"" + pokè._id}'" src=" ${
         pokè.imageUrl
       }" class="card-img-top h-50 object-fit-fill transition" alt="${pokè.name}">
-                <div class="card-body">
-                    <h5 class="card-title"><a class="text-decoration-none text-black" href="details.html?id=${
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-5"><a class="text-decoration-none text-black" href="details.html?id=${
                       "" + pokè._id
                     }">${pokè.name}</a></h5>
-                    <p class="card-text">Tipo : ${pokè.brand}</p>
-                    <p class="card-text">Livello: ${pokè.description}
-                    <p class="card-text">Prezzo: €${pokè.price}
+                    <p class="card-text mb-2">Tipo : ${pokè.brand}</p>
+                    <p class="card-text mb-2">Livello: ${pokè.description}
+                    <p class="card-text mb-2">Prezzo: €${pokè.price}
                 </div>    
                 <div class="card-footer d-flex justify-content-between">
                     <a href="details.html?id=${"" + pokè._id}" class="btn btn-outline-success">Dettagli</a>
