@@ -22,7 +22,6 @@ nav,
 footer {
   background-image: url(https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMjJiYXRjaDUta3VsLTM2XzEuanBn.jpg);
   background-repeat: no-repeat;
-
   background-size: cover;
 }
 
@@ -33,14 +32,30 @@ footer {
 
 #titolo1 {
   font-weight: 400;
+  font-family: "Inter", serif;
+}
+
+#titolo1:hover {
 }
 
 #titolo2 {
   font-weight: 500;
+  font-family: "Inter", serif;
 }
 
 #titolo3 {
   font-weight: 200;
+  font-family: "Pokemon Solid", sans-serif;
+}
+
+#titolo3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#titolo3 a:hover {
+  text-decoration: underline;
+  color: rgb(172, 3, 3);
 }
 
 #dettagli p {
@@ -71,28 +86,4 @@ Quest'ultima non funziona
 #dettagli:hover {
   background: linear-gradient(45deg, hsla(168, 85%, 52%, 0.5), hsla(263, 88%, 45%, 0.5) 100%);
   cursor: pointer;
-}
-
-.gg-pokemon {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 18px;
-  height: 18px;
-  border: 5px solid transparent;
-  box-shadow: 0 0 0 2px, inset 0 0 0 2px;
-  border-radius: 100%;
-}
-.gg-pokemon::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  border-left: 8px solid;
-  border-right: 8px solid;
-  left: -6px;
-  top: 3px;
 }
