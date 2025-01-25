@@ -229,7 +229,7 @@ if (cart) {
 newShoppingCart();
 
 let audioPokèmon = document.getElementById("audio");
-audioPokèmon.volume = 0.1;
+audioPokèmon.volume = 0.03;
 
 function outputUpdate(vol) {
   var audiolevel = document.getElementById("audio");
