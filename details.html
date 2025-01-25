@@ -22,6 +22,25 @@
   <body>
     <header>
       <nav class="navbar px-sm-5 justify-content-between flex-nowrap">
+        <audio
+          src="./assets/audio/Pokémon Red & Blue Music Opening Theme.mp3"
+          autoplay="autoplay"
+          id="audio"
+          class="d-none"
+        ></audio>
+        <div>
+          <a onclick="playSound()" id="play"><i class="fa fa-play" style="font-size: 24px"></i></a>
+          <a onclick="pauseSound()" id="pause"><i class="fa fa-pause" style="font-size: 24px"></i></a>
+          <input
+            id="volumeslider"
+            type="range"
+            min="0.01"
+            max="0.10"
+            step="0.01"
+            oninput="outputUpdate(value)"
+            style="color: black"
+          />
+        </div>
         <div class="container-fluid">
           <div class="d-flex">
             <a class="navbar-brand" href="./homepage.html">
@@ -44,6 +63,7 @@
             </ul>
           </div>
           <button
+            id="carrello"
             class="border border-0 bg"
             style="background-color: transparent"
             type="button"

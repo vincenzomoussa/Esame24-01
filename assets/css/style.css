@@ -18,7 +18,6 @@ body {
   background-size: 250%;
 }
 
-nav,
 footer {
   background-image: url(https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMjJiYXRjaDUta3VsLTM2XzEuanBn.jpg);
   background-repeat: no-repeat;
@@ -63,15 +62,13 @@ footer {
   font-size: 30px;
 }
 
-/* .scrolled {
-  background-color: rgb(255, 255, 255) !important;
-  transition: background-color 0.5s ease !important;
+header {
+  background-color: white;
 }
- 
-Quest'ultima non funziona
-
-*/
-
+.scrolled {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
 #fotoPokè {
   cursor: pointer;
 }
@@ -83,4 +80,42 @@ Quest'ultima non funziona
 #dettagli:hover {
   background: linear-gradient(45deg, hsla(168, 85%, 52%, 0.5), hsla(263, 88%, 45%, 0.5) 100%);
   cursor: pointer;
+}
+
+#volumeslider {
+  right: 100px;
+  top: 25px;
+  position: fixed;
+  z-index: 3;
+  accent-color: black;
+}
+
+#play {
+  right: 280px;
+  top: 20px;
+  position: fixed;
+  z-index: 3;
+}
+#pause {
+  right: 245px;
+  top: 20px;
+  position: fixed;
+  z-index: 3;
+}
+
+#play,
+#pause,
+#volumeslider:hover {
+  cursor: pointer;
+  accent-color: red;
+}
+
+.fa-play:hover,
+.fa-pause:hover,
+#carrello:hover {
+  color: red;
+}
+
+#carrello {
+  font-size: 20px;
 }

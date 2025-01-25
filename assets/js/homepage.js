@@ -119,11 +119,29 @@ fetch(url, {
 
 // Provo a implementare la stessa funzione della scroll di Medium, quindi si attacca alla parte superiore dello scroll e il background cambia leggermente, così' da permettere una fluidità maggiore della pagina.
 
-/* window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {
   var navbar = document.getElementById("barra");
-  if (window.scrollY > 410) {
+  if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
   }
-}); */
+});
+
+let audioPokèmon = document.getElementById("audio");
+audioPokèmon.volume = 0.1;
+
+function outputUpdate(vol) {
+  var audiolevel = document.getElementById("audio");
+  audiolevel.volume = vol;
+}
+
+function playSound() {
+  var sound = document.getElementById("audio");
+  sound.play();
+}
+
+function pauseSound() {
+  var sound = document.getElementById("audio");
+  sound.pause();
+}

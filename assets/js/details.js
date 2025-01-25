@@ -114,3 +114,21 @@ fetch(url, {
     }
     alert("Assenza di connessione...");
   });
+
+let audioPokèmon = document.getElementById("audio");
+audioPokèmon.volume = 0.1;
+
+function outputUpdate(vol) {
+  var audiolevel = document.getElementById("audio");
+  audiolevel.volume = vol;
+}
+
+function playSound() {
+  var sound = document.getElementById("audio");
+  sound.play();
+}
+
+function pauseSound() {
+  var sound = document.getElementById("audio");
+  sound.pause();
+}
